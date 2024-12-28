@@ -1,0 +1,164 @@
+/****** Start Global syles ******/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: "Comfortaa", cursive;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: var(--main-color);
+    color: var(--color-text);
+}
+
+:root {
+    --main-color: #272b30;
+    --seconde-color: #32383e;
+    --color-text: #fff;
+    --btn-main-color: #272729;
+
+}
+
+.badge-color {
+    background-color: var(--seconde-color);
+}
+
+/****** End Global syles ******/
+
+
+/****** Start Navbar syles ******/
+header img {
+    max-height: 30vh;
+    object-fit: cover;
+}
+
+
+nav {
+    background-color: rgb(58, 73, 123) !important;
+    margin-inline: auto;
+    margin-top: -30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+}
+
+.navbar .logo-img {
+    margin-right: -30px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #09c !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: #09c !important;
+}
+
+/****** End Navbar syles ******/
+
+/****** Start Cards syles ******/
+.card {
+    width: 300px;
+    background: #333;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .card-body h5 {
+    font-size: 18px;
+}
+
+/****** End Cards syles ******/
+
+
+/****** Start Details syles ******/
+
+#game-details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #444;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+
+/****** End Details syles ******/
+
+
+/****** Start Loader syles ******/
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+    background:
+        var(--c) 50% 0,
+        var(--c) 50% 100%,
+        var(--c) 100% 50%,
+        var(--c) 0 50%;
+    background-size: 12px 12px;
+    animation: l12 1s infinite;
+}
+
+.loader::before {
+    margin: 4px;
+    filter: hue-rotate(45deg);
+    background-size: 8px 8px;
+    animation-timing-function: linear
+}
+
+@keyframes l12 {
+    100% {
+        transform: rotate(.5turn)
+    }
+}
+
+
+/****** End Loader syles ******/
